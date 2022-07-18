@@ -1,0 +1,62 @@
+{
+  "compilerOptions": {
+    "allowJs": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "module": "commonjs",
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ],
+    "strict": true,
+    "declaration": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "importHelpers": true,
+    "esModuleInterop": true,
+    "useUnknownInCatchVariables": false,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es2021",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": false,
+    "skipLibCheck": true,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "noFallthroughCasesInSwitch": false,
+    "jsx": "preserve",
+    "paths": {
+      "@/*": [
+        "frontend/*"
+      ],
+      "@backend/*": [
+        "backend/*"
+      ],
+      "@root/*": [
+        "*"
+      ]
+    },
+    "types": [
+      "node",
+      "vite/client",
+      "vite-plugin-pages/client",
+      "vite-plugin-vue-layouts/client"
+    ],
+    "typeRoots": [
+      "node_modules/@types",
+      "frontend/auto-imports.d.ts",
+      "frontend/components.d.ts",
+      "frontend/shims.d.ts",
+      "frontend/root-types.ts",
+      "frontend/types/index.ts"
+    ]
+  }
+}

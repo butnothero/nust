@@ -1,0 +1,11 @@
+/dist/
+/coverage/
+/build/
+/node_modules/
+/static/
+/fonts/
+/font/
+/styles/
+/public/
+auto-imports.d.ts
+components.d.ts

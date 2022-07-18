@@ -1,0 +1,28 @@
+#Old style library without packaging
+*.min.css
+
+#Other types of documents
+*.js
+*.ts
+*.jpg
+*.png
+*.eot
+*.ttf
+*.woff
+*.woff2
+*.json
+*.md
+
+#Test and package catalog
+/dist/
+/build/
+/coverage/
+/node_modules/
+/static/
+/serverless/
+/scripts/
+/_app/
+/font/
+/fonts/
+/mock/
+/mocks/

@@ -1,0 +1,18 @@
+{
+  "extends": "./tsconfig.json",
+  "exclude": [
+    "node_modules",
+    "frontend",
+    "test",
+    "scripts",
+    "constants",
+    "dist",
+    "**/*spec.ts",
+    "jest.config.*",
+    "vite.config.*",
+    "windi.config.*",
+    "constants.*",
+    "type",
+    "types"
+  ]
+}
