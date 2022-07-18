@@ -10,7 +10,8 @@
     "build:csr": "ts-node scripts/build-csr",
     "build:ssr": "ts-node scripts/build-ssr",
     "build:pages": "ts-node scripts/build-pages",
-    "postbuild": "npm run build:pages && npm run build:csr && npm run build:ssr",
+    "build:html": "ts-node scripts/build-html",
+    "postbuild": "yarn run build:html && yarn run build:pages && yarn run build:csr && yarn run build:ssr && yarn run clean:html",
     "--- dev ---": "",
     "start": "yarn run clean:generated && yarn run clean:dist && cross-env NODE_ENV=development nest start",
     "watch": "yarn run clean:generated && yarn run clean:dist && cross-env NODE_ENV=development nest start --watch",
@@ -33,7 +34,8 @@
     "test:e2e": "",
     "--- clean ---": "",
     "clean:dist": "rimraf dist",
-    "clean:generated": "rimraf frontend/auto-imports.d.ts && rimraf frontend/components.d.ts"
+    "clean:generated": "rimraf frontend/auto-imports.d.ts && rimraf frontend/components.d.ts",
+    "clean:html": "rimraf ./index.html"
   },
   "dependencies": {
     "@egjs/hammerjs": "^2.0.17",
