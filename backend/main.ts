@@ -22,7 +22,7 @@ async function bootstrap() {
   app.useGlobalFilters(new HttpExceptionFilter());
 
   if (isProduction) {
-    app.useStaticAssets(resolveDistPath('client'), {
+    app.useStaticAssets(resolveDistPath('frontend'), {
       index: false,
     });
     app.use(compression());

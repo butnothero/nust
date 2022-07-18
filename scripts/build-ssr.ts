@@ -1,6 +1,6 @@
 import { execSync } from 'child_process';
 
-execSync('vite build --outDir dist/server --ssr client/entry-server.ts', {
+execSync('vite build --outDir dist/backend --ssr frontend/entry-server.ts', {
   stdio: 'inherit',
 });
 

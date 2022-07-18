@@ -23,10 +23,10 @@ export class HttpExceptionFilter implements ExceptionFilter {
     let render: any;
 
     if (isProduction) {
-      template = readFileSync(resolveDistPath('client', 'index.html'), {
+      template = readFileSync(resolveDistPath('frontend', 'index.html'), {
         encoding: 'utf-8',
       });
-      render = (await import(resolveDistPath('server', 'entry-server.js'))).render;
+      render = (await import(resolveDistPath('backend', 'entry-server.js'))).render;
     } else {
       vite = await getViteServer();
       template = await vite.transformIndexHtml(
