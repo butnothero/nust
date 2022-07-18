@@ -18,5 +18,5 @@ useHead({
 </style>
 
 <route lang="yml">
-{ name: '404', meta: { layout: 404 } }
+{ name: '404', meta: { layout: error } }
 </route>

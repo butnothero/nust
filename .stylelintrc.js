@@ -14,7 +14,13 @@ module.exports = {
   rules: {
     'declaration-block-trailing-semicolon': null,
     'no-descending-specificity': null,
-    'at-rule-no-unknown': null,
+    'at-rule-no-unknown': [
+      true,
+      {
+        ignoreAtRules: ['tailwind', 'windicss', 'apply', 'variants', 'responsive', 'screen'],
+      },
+    ],
+
     'scss/at-rule-no-unknown': true,
     'selector-class-pattern': null,
     // 'selector-class-pattern': '^([a-z][a-z0-9]*)(-[a-z0-9]+)*$',

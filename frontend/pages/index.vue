@@ -8,6 +8,7 @@ useHead({
 .home
   .home__container
     h1 Привет :)
+    HelloNust
 </template>
 
 <style scoped lang="scss">

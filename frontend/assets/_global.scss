@@ -1,0 +1,11 @@
+h1 {
+  @apply text-26px mb-20px;
+}
+
+h2 {
+  @apply text-20px mb-15px;
+}
+
+a {
+  @apply text-sky-500 hover:(text-sky-700);
+}

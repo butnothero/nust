@@ -1,8 +1,4 @@
-<script setup lang="ts">
-onMounted(() => {
-  console.warn('Hello Vue 3')
-})
-</script>
+<script setup lang="ts"></script>
 
 <template lang="pug">
 router-view

@@ -1,11 +1,11 @@
 <script setup lang="ts">
 onMounted(() => {
-  console.log('404 layout');
+  console.error('error layout');
 });
 </script>
 
 <template lang="pug">
-.error-layout.layout
+.layout.error-layout
   main
     router-view(v-slot='{ Component }')
       component(:is='Component')
@@ -13,6 +13,5 @@ onMounted(() => {
 
 <style scoped lang="scss">
 .error-layout {
-  @apply bg-primary;
 }
 </style>

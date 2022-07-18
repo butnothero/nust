@@ -107,10 +107,8 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         additionalData: `
-          @import "@/assets/reset.scss";
-          @import "@/assets/global.scss";
-          @import "@/assets/typography.scss";
           @import "@/assets/design-system/index.scss";
+          @import "@/assets/vendors/index.scss";
         `,
         sourceMap: true,
         charset: false,

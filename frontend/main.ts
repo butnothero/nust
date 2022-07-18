@@ -3,6 +3,10 @@ import 'virtual:windi-base.css';
 import 'virtual:windi-components.css';
 import 'virtual:windi-utilities.css';
 
+// Custom styles
+import '@/assets/index.scss';
+import '@/assets/vendors/nprogress/index.scss';
+
 import { createHead } from '@vueuse/head';
 import mitt from 'mitt';
 import devalue from '@nuxt/devalue';
