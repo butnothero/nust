@@ -29,7 +29,7 @@ lerna-debug.log*
 *.sublime-workspace
 
 # IDE - VSCode
-.vscode/*
+/.vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
@@ -38,3 +38,12 @@ lerna-debug.log*
 # Auto generate
 auto-imports.d.ts
 components.d.ts
+
+# Yarn
+/.yarn/**/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
