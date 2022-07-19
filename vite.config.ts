@@ -13,7 +13,7 @@ import { viteCommonjs, esbuildCommonjs } from '@originjs/vite-plugin-commonjs/li
 // import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
-  publicDir: resolve(__dirname, 'frontend', 'static'),
+  publicDir: resolve(__dirname, 'client', 'static'),
   base: '/',
   build: {
     target: 'modules',
@@ -40,11 +40,11 @@ export default defineConfig({
     Pages({
       extensions: ['vue'],
       exclude: ['**/components/*.vue', '**/modules/*.ts'],
-      dirs: ['./frontend/pages'],
+      dirs: ['./client/pages'],
     }),
 
     Layouts({
-      layoutsDirs: './frontend/layouts',
+      layoutsDirs: './client/layouts',
     }),
 
     AutoImport({
@@ -63,7 +63,7 @@ export default defineConfig({
         },
       ],
 
-      dts: 'frontend/auto-imports.d.ts',
+      dts: 'client/auto-imports.d.ts',
     }),
 
     Components({
@@ -78,9 +78,9 @@ export default defineConfig({
       // custom resolvers
       resolvers: [],
 
-      dts: 'frontend/components.d.ts',
+      dts: 'client/components.d.ts',
 
-      dirs: ['./frontend/components'],
+      dirs: ['./client/components'],
     }),
 
     Inspect({
@@ -91,9 +91,9 @@ export default defineConfig({
   resolve: {
     alias: {
       // @ts-ignore
-      '@': fileURLToPath(new URL('frontend', import.meta.url)),
+      '@': fileURLToPath(new URL('client', import.meta.url)),
       // @ts-ignore
-      '@backend': fileURLToPath(new URL('backend', import.meta.url)),
+      '@backend': fileURLToPath(new URL('server', import.meta.url)),
       // @ts-ignore
       '@root': fileURLToPath(new URL('./', import.meta.url)),
     },

@@ -35,10 +35,10 @@
     "jsx": "preserve",
     "paths": {
       "@/*": [
-        "frontend/*"
+        "client/*"
       ],
-      "@backend/*": [
-        "backend/*"
+      "@server/*": [
+        "server/*"
       ],
       "@root/*": [
         "*"
@@ -52,11 +52,11 @@
     ],
     "typeRoots": [
       "node_modules/@types",
-      "frontend/auto-imports.d.ts",
-      "frontend/components.d.ts",
-      "frontend/shims.d.ts",
-      "frontend/root-types.ts",
-      "frontend/types/index.ts"
+      "client/auto-imports.d.ts",
+      "client/components.d.ts",
+      "client/shims.d.ts",
+      "client/root-types.ts",
+      "client/types/index.ts"
     ]
   }
 }

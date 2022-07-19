@@ -11,7 +11,7 @@ export const getManifest = () => manifest;
 
 const loadRender = async () => {
   try {
-    render = (await import(`file://${resolveDistPath('backend', 'entry-server.js')}`)).render;
+    render = (await import(`file://${resolveDistPath('server', 'entry-server.js')}`)).render;
   } catch (e) {
     console.error('Ошибка загрузки функции рендера', e);
   }
@@ -19,7 +19,7 @@ const loadRender = async () => {
 
 const loadTemplate = () => {
   try {
-    template = readFileSync(resolveDistPath('frontend', 'index.html'), {
+    template = readFileSync(resolveDistPath('client', 'index.html'), {
       encoding: 'utf-8',
     });
   } catch (e) {
@@ -30,7 +30,7 @@ const loadTemplate = () => {
 const loadManifest = () => {
   try {
     manifest = JSON.parse(
-      readFileSync(resolveDistPath('frontend', 'ssr-manifest.json'), {
+      readFileSync(resolveDistPath('client', 'ssr-manifest.json'), {
         encoding: 'utf-8',
       }),
     );

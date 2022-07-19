@@ -36,7 +36,7 @@
     "test:e2e": "",
     "--- clean ---": "",
     "clean:dist": "rimraf dist",
-    "clean:generated": "rimraf frontend/auto-imports.d.ts && rimraf frontend/components.d.ts",
+    "clean:generated": "rimraf client/auto-imports.d.ts && rimraf client/components.d.ts",
     "clean:html": "rimraf ./index.html"
   },
   "dependencies": {

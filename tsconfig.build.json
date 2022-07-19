@@ -2,7 +2,7 @@
   "extends": "./tsconfig.json",
   "exclude": [
     "node_modules",
-    "frontend",
+    "client",
     "test",
     "scripts",
     "constants",

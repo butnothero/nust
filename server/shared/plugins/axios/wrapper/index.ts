@@ -7,10 +7,13 @@ import type {
   AxiosWrapperOptions,
   RequestInfoToCollect,
   Interceptors,
-} from '@backend/shared/plugins/axios/wrapper/types';
-import { ApiMethodParamsOptions } from '@backend/shared/plugins/axios/wrapper/types';
+} from '@server/shared/plugins/axios/wrapper/types';
+import { ApiMethodParamsOptions } from '@server/shared/plugins/axios/wrapper/types';
 
-export type { ApiMethodParams, AxiosWrapperOptions } from '@backend/shared/plugins/axios/wrapper/types';
+export type {
+  ApiMethodParams,
+  AxiosWrapperOptions,
+} from '@server/shared/plugins/axios/wrapper/types';
 
 export default class AxiosWrapper {
   static DEFAULT_TIMEOUT = 30 * 1000;

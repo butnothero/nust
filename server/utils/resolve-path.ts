@@ -11,7 +11,7 @@ const __dirname = dirname(__filename);
  * @returns absolute path of file
  */
 export const resolveClientPath = (...pathSegments: string[]) =>
-  resolve(__dirname, '..', '..', 'frontend', ...pathSegments);
+  resolve(__dirname, '..', '..', 'client', ...pathSegments);
 
 /**
  * resolve dist file path

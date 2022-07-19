@@ -1,7 +1,7 @@
 module.exports = {
   ignoreFiles: [
-    'frontend/assets/styles/scss/vendors/**/*.scss',
-    'frontend/assets/styles/scss/vendors/**/*.css',
+    'client/assets/styles/scss/vendors/**/*.scss',
+    'client/assets/styles/scss/vendors/**/*.css',
   ],
   extends: [
     'stylelint-config-standard',
