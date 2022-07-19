@@ -1,6 +1,6 @@
 import { createServer } from 'vite';
 import type { ViteDevServer } from 'vite';
-import { resolveClientPath } from './utils/resolve-path';
+import { resolveClientPath } from './utils/resolve-path.js';
 
 let viteDevServer: ViteDevServer;
 
@@ -14,9 +14,8 @@ export async function getViteServer({ force } = { force: false }) {
   if (!viteDevServer || force) {
     viteDevServer = await createServer({
       publicDir: resolveClientPath('static'),
-      server: {
-        middlewareMode: 'ssr',
-      },
+      server: { middlewareMode: true },
+      appType: 'custom',
     });
   }
 

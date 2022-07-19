@@ -10,17 +10,12 @@ import {
 } from '@nestjs/common';
 import type { Request, Response } from 'express';
 import type { ViteDevServer } from 'vite';
-import {
-  getManifest,
-  getRender,
-  getTemplate,
-  initProductionClient,
-} from '@backend/utils/production';
-import { FILE_CLIENT_PAGES } from '@backend/constants/files';
-import { getClientRoutes } from '@backend/utils/client';
-import { getViteServer } from './get-vite-server';
-import { isProduction } from './utils/env';
-import { resolveClientPath, resolveDistPath } from './utils/resolve-path';
+import { FILE_CLIENT_PAGES } from './constants/files.js';
+import { getClientRoutes } from './utils/client.js';
+import { getManifest, getRender, getTemplate, initProductionClient } from './utils/production.js';
+import { getViteServer } from './get-vite-server.js';
+import { isProduction } from './utils/env.js';
+import { resolveClientPath, resolveDistPath } from './utils/resolve-path.js';
 
 const getRoutes = (): string[] => {
   if (isProduction) {

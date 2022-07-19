@@ -1,5 +1,5 @@
-import { resolveDistPath } from '@backend/utils/resolve-path';
 import { readFileSync } from 'fs';
+import { resolveDistPath } from './resolve-path.js';
 
 let render: any;
 let template: string;
@@ -11,7 +11,7 @@ export const getManifest = () => manifest;
 
 const loadRender = async () => {
   try {
-    render = (await import(resolveDistPath('backend', 'entry-server.js'))).render;
+    render = (await import(`file://${resolveDistPath('backend', 'entry-server.js')}`)).render;
   } catch (e) {
     console.error('Ошибка загрузки функции рендера', e);
   }

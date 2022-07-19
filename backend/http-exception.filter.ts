@@ -1,9 +1,9 @@
 import { ArgumentsHost, Catch, ExceptionFilter, HttpException, Req } from '@nestjs/common';
 import { ViteDevServer } from 'vite';
 import { readFileSync } from 'fs';
-import { isProduction } from './utils/env';
-import { resolveClientPath, resolveDistPath } from './utils/resolve-path';
-import { getViteServer } from './get-vite-server';
+import { isProduction } from './utils/env.js';
+import { resolveClientPath, resolveDistPath } from './utils/resolve-path.js';
+import { getViteServer } from './get-vite-server.js';
 
 @Catch()
 export class HttpExceptionFilter implements ExceptionFilter {
@@ -26,7 +26,7 @@ export class HttpExceptionFilter implements ExceptionFilter {
       template = readFileSync(resolveDistPath('frontend', 'index.html'), {
         encoding: 'utf-8',
       });
-      render = (await import(resolveDistPath('backend', 'entry-server.js'))).render;
+      render = (await import(`file://${resolveDistPath('backend', 'entry-server.js')}`)).render;
     } else {
       vite = await getViteServer();
       template = await vite.transformIndexHtml(

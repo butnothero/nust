@@ -3,12 +3,12 @@ import compression from 'compression';
 import type { NestExpressApplication } from '@nestjs/platform-express';
 import cookieParser from 'cookie-parser';
 import os from 'os';
-import { AppModule } from './app.module';
-import { getViteServer } from './get-vite-server';
-import { isProduction } from './utils/env';
-import { resolveDistPath } from './utils/resolve-path';
+import { AppModule } from './app.module.js';
+import { getViteServer } from './get-vite-server.js';
+import { isProduction } from './utils/env.js';
+import { resolveDistPath } from './utils/resolve-path.js';
 
-import { HttpExceptionFilter } from './http-exception.filter';
+import { HttpExceptionFilter } from './http-exception.filter.js';
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule, { logger: false });

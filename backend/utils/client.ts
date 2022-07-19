@@ -1,7 +1,7 @@
 import fg from 'fast-glob';
 import { join } from 'path';
-import { resolveClientPath } from './resolve-path';
-import { getIgnore, slash } from './file';
+import { resolveClientPath } from './resolve-path.js';
+import { getIgnore, slash } from './file.js';
 
 const getPageFiles = () =>
   fg.sync(slash(join(resolveClientPath('pages'), `**/*.vue`)), {

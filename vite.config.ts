@@ -16,7 +16,7 @@ export default defineConfig({
   publicDir: resolve(__dirname, 'frontend', 'static'),
   base: '/',
   build: {
-    target: 'es2021',
+    target: 'modules',
     // outDir: join(__dirname, 'dist'),
     assetsInlineLimit: 10000,
     sourcemap: true,
