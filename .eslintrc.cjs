@@ -69,6 +69,8 @@ module.exports = {
     'no-unused-vars': ['off', { varsIgnorePattern: '^_' }],
     '@typescript-eslint/no-unused-vars': ['off', { varsIgnorePattern: '^_' }],
     'vue/multi-word-component-names': 'off',
+    'vue/valid-attribute-name': 'off',
+    'vue/valid-model-definition': 'off',
     'vue/attributes-order': [
       'error',
       {
