@@ -7,5 +7,6 @@
 /font/
 /styles/
 /public/
+/.yarn/
 auto-imports.d.ts
 components.d.ts
