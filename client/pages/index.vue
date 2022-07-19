@@ -9,6 +9,7 @@ useHead({
   .home__container
     h1 Привет :)
     HelloNust
+    Slider
 </template>
 
 <style scoped lang="scss">
