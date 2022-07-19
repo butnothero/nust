@@ -44,4 +44,4 @@ async function bootstrap() {
   await app.listen(port);
 }
 
-bootstrap();
+await bootstrap();
