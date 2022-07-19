@@ -102,7 +102,7 @@ module.exports = {
         math: 'always',
       },
     ],
-    'vue/name-property-casing': ['error', 'PascalCase'],
+    'vue/component-definition-name-casing': ['error', 'PascalCase'],
     'vue/no-multi-spaces': 'error',
     'vue/order-in-components': [
       'error',
