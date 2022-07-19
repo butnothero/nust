@@ -1,6 +1,7 @@
 import { defineConfig } from 'windicss/helpers';
 
 export default defineConfig({
+  preflight: false,
   extract: {
     include: ['frontend/**/*.{vue,html,jsx,tsx,ts,js}'],
     exclude: ['node_modules', '.git'],

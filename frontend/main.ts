@@ -1,7 +1,5 @@
-// Windicss layers
-import 'virtual:windi-base.css';
-import 'virtual:windi-components.css';
-import 'virtual:windi-utilities.css';
+// Virtual
+import 'virtual:windi.css';
 
 // Custom styles
 import '@/assets/index.scss';
@@ -26,7 +24,6 @@ const options: Options = {
     passToPage: false,
   },
   transformState(state) {
-    // @ts-ignore
     return import.meta.env.SSR ? devalue(state) : state;
   },
   routerOptions: {
@@ -79,9 +76,9 @@ export default createVueApp(App, options, async (ctx) => {
   // ------------------------------------------
 
   // ------- IMPORT MIDDLEWARES -------
-  // @ts-ignore
   const middlewareGlob = import.meta.globEager('./middlewares/*.ts');
   const middlewares: Middleware[] = Object.keys(middlewareGlob).map(
+    // @ts-ignore
     (key) => middlewareGlob[key].default,
   );
   const handler = middlewareHandler(ctx, middlewares);
