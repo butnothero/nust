@@ -54,6 +54,7 @@ export const viteSSR: SsrHandler = function viteSSR(options, hook) {
     // The 'redirect' utility has been called during rendering: skip everything else
     if (isRedirect()) return response;
 
+    // TODO: Добавить возможность добавления нескольких удаляемых хранилищ
     // Удаление хранилища, которое предназначено только для использования при SSR
     if (typeof context.initialState.pinia !== 'undefined') {
       if (typeof context.initialState.pinia.ssrOnly !== 'undefined') {
