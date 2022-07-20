@@ -93,7 +93,7 @@ export default defineConfig({
       // @ts-ignore
       '@': fileURLToPath(new URL('client', import.meta.url)),
       // @ts-ignore
-      '@backend': fileURLToPath(new URL('server', import.meta.url)),
+      '@server': fileURLToPath(new URL('server', import.meta.url)),
       // @ts-ignore
       '@root': fileURLToPath(new URL('./', import.meta.url)),
     },
@@ -107,8 +107,8 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         additionalData: `
-          @import "@/assets/design-system/index.scss";
-          @import "@/assets/vendors/index.scss";
+          @import "@/assets/scss/design-system/index.scss";
+          @import "@/assets/scss/vendors/index.scss";
         `,
         sourceMap: true,
         charset: false,

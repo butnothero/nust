@@ -2,8 +2,8 @@
 import 'virtual:windi.css';
 
 // Custom styles
-import '@/assets/index.scss';
-import '@/assets/vendors/nprogress/index.scss';
+import '@/assets/scss/index.scss';
+import '@/assets/scss/vendors/nprogress/index.scss';
 
 import { createHead } from '@vueuse/head';
 import mitt from 'mitt';
