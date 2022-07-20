@@ -1,6 +1,6 @@
 import type { ServerResponse } from 'http';
 import type { IncomingMessage } from 'connect';
-import { IDynamicObject } from '@/interfaces';
+import { IDynamicObject } from '@/interfaces/common';
 
 export interface Meta {
   propsGetter?: boolean | string;
