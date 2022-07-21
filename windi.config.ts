@@ -3,14 +3,14 @@ import { defineConfig } from 'windicss/helpers';
 export default defineConfig({
   preflight: false,
   extract: {
-    include: ['frontend/**/*.{vue,html,jsx,tsx,ts,js}'],
+    include: ['client/**/*.{vue,html,jsx,tsx,ts,js}'],
     exclude: ['node_modules', '.git'],
   },
   // https://windicss.org/posts/v30.html#attributify-mode
   attributify: {
     prefix: 'w',
   },
-  purge: ['./index.html', './frontend/**/*.{vue,js,ts,jsx,tsx}'],
+  purge: ['./index.html', './client/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
     extend: {
       screens: {
