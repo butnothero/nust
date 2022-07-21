@@ -1,6 +1,6 @@
 {
   "name": "nust",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "NestJS + Vue 3 + Vite",
   "author": "butnothero",
   "private": true,
