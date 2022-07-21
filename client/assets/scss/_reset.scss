@@ -5,15 +5,10 @@
   box-sizing: border-box;
 }
 
-/* Убираем внутренние отступы */
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class + убираем внутренние отступы */
 ul[class],
 ol[class] {
   padding: 0;
-}
-
-/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class */
-ul[class],
-ol[class] {
   list-style: none;
 }
 
@@ -39,7 +34,7 @@ dd {
 body {
   min-height: 100vh;
   scroll-behavior: smooth;
-  text-rendering: optimizeSpeed;
+  text-rendering: optimizespeed;
   line-height: 1.5;
 }
 
@@ -55,8 +50,8 @@ a:not([class]) {
 
 /* Упрощаем работу с изображениями */
 img {
-  max-width: 100%;
   display: block;
+  max-width: 100%;
 }
 
 /* Указываем понятную периодичность в потоке данных у article */
@@ -75,9 +70,9 @@ select {
 /* Удаляем все анимации и переходы для людей, которые предпочитают их не использовать */
 @media (prefers-reduced-motion: reduce) {
   * {
+    transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
 }
