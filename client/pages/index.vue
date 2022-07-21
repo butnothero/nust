@@ -7,13 +7,19 @@ useHead({
 <template lang="pug">
 .home
   .home__container
-    h1 Привет :)
-    HelloNust
+    .container-px
+      h1 Привет :)
+      button.btn Стилизовано классом
+      button.btn-2 Стилизовано @apply
+      HelloNust
     Slider
 </template>
 
 <style scoped lang="scss">
 .home {
+  .btn-2 {
+    @apply btn;
+  }
 }
 </style>
 

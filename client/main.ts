@@ -1,9 +1,12 @@
-// Virtual
-import 'virtual:windi.css';
+// Reset CSS
+import '@unocss/reset/tailwind.css';
 
 // Custom styles
 import '@/assets/scss/index.scss';
 import '@/assets/scss/vendors/nprogress/index.scss';
+
+// https://github.com/unocss/unocss
+import 'uno.css';
 
 import { createHead } from '@vueuse/head';
 import mitt from 'mitt';

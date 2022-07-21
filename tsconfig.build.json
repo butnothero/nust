@@ -11,6 +11,7 @@
     "jest.config.*",
     "vite.config.*",
     "windi.config.*",
+    "unocss.config.*",
     "constants.*",
     "type",
     "types"

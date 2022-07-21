@@ -1,31 +1,18 @@
-import { defineConfig } from 'windicss/helpers';
+import {
+  defineConfig,
+  presetAttributify,
+  presetUno,
+  transformerCompileClass,
+  transformerDirectives,
+  transformerVariantGroup,
+} from 'unocss';
+import extractorPug from '@unocss/extractor-pug';
+import { extractorSplit } from '@unocss/core';
 
 export default defineConfig({
-  preflight: false,
-  extract: {
-    include: ['client/**/*.{vue,html,jsx,tsx,ts,js}'],
-    exclude: ['node_modules', '.git'],
-  },
-  // https://windicss.org/posts/v30.html#attributify-mode
-  attributify: {
-    prefix: 'w',
-  },
-  purge: ['./index.html', './client/**/*.{vue,js,ts,jsx,tsx}'],
-  theme: {
-    extend: {
-      screens: {
-        // Ширина экрана, при которой начинается обработка hover состояния
-        'w-hover': '100px',
-      },
-      textColor: {},
-      backgroundColor: {},
-      boxShadow: {},
-    },
-  },
-  variants: {
-    scrollbar: ['rounded'],
-  },
   shortcuts: {
+    btn: 'bg-red text-20px font-italic text-green rounded p-20px hover:(bg-blue)',
+
     // Padding
     'box-pl': 'pl-16px',
     'box-pr': 'pr-16px',
@@ -77,5 +64,18 @@ export default defineConfig({
 
     // Text
     'text-break': 'overflow-hidden break-words',
+  },
+
+  extractors: [extractorPug(), extractorSplit],
+
+  presets: [presetAttributify(), presetUno()],
+  transformers: [transformerCompileClass(), transformerVariantGroup(), transformerDirectives()],
+  theme: {
+    extend: {
+      screens: {
+        // Ширина экрана, при которой начинается обработка hover состояния
+        'w-hover': '100px',
+      },
+    },
   },
 });
